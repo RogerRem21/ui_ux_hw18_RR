@@ -2,12 +2,12 @@ body {
   margin: 0;
 }
 header {
-  background-color: #373738;
+  background-color: #000000;
   padding: 15px;
 }
 header ul {
   float: right;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 header li {
   display: inline-block;
@@ -17,16 +17,14 @@ header p {
   display: inline-block;
 }
 .heroImg {
-  background-color: #EBEBEB;
+  background-color: #00bcd4;
   padding: 100px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
-.content {
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 50px;
-  background-color: #FFFFFF;
-  text-align: center;
-}
+
 button {
   padding: 15px;
   background-color: #373738;
@@ -45,5 +43,143 @@ footer ul {
 }
 footer li {
   display: inline-block;
-  padding: 0px 7px;
+  padding: 15;
+}
+* {
+  box-sizing: border-box;
+}
+
+#mySkills-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  background-color: rgb(0, 0, 0);
+  color: #e3f2fd;
+}
+
+#mySkills-container > h1 {
+  width: 100%;
+  flex-basis: 100%;
+  align-self: flex-start;
+  text-align: center;
+}
+
+.skill-item {
+  position: relative;
+  border: rgb(23, 187, 216) solid 5px;
+  width: 31%;
+  max-width: 600px;
+  max-height: 800px;
+  margin: 2% 1%;
+  padding: 2% 3%;
+}
+
+.skill-item > img { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.skill-item > h2,p {
+  text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+  .skill-item {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+#myWork-grid {
+  display: grid;
+  grid-template-rows: 6em 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 3%; 
+  width: 100%;
+  height: fit-content;
+  padding: 2%;
+  background-color: rgb(24, 201, 245);
+}
+h1 {
+  text-align:center;
+  font-size: xx-large;
+}
+.caseStudy-Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr;
+}
+
+.CSdetials {
+  display: Flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+.mockup {
+ margin: auto;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+.subtitle {
+  font-size: x-large;
+}
+button {
+  text-align: right;
+  font-size: large;
+}
+
+@media only screen and (max-width: 640px) {
+  .caseStudy-Grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+html, body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+  height: 100%;
+}
+
+#wrapper {
+  background-color: #e3f2fd;
+  min-height: 100%;
+  height: auto !important;
+  margin-bottom: -50px; /* the bottom margin is the negative value of the footer's total height */
+}
+
+#wrapper:after {
+  content: "";
+  display: block;
+  height: 50px; /* the footer's total height */
+}
+
+#content {
+  height: 100%;
+}
+
+#footer {
+  height: 50px; /* the footer's total height */
+}
+
+#footer-content {
+  background-color: #3d3c3d;
+  border: 1px solid #000000;
+  height: 32px; /* height + top/bottom paddding + top/bottom border must add up to footer height */
+  padding: 8px;
 }
